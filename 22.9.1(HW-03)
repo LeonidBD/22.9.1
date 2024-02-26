@@ -9,7 +9,6 @@ def merge_sort(array):
         right = merge_sort(array[middle:])
         return merge(left, right)
 
-
 def merge(left, right):
     result = []
     i, j = 0, 0
@@ -34,7 +33,6 @@ def merge(left, right):
 
 print(merge_sort(array))
 
-
 def binary_search(array, element, left, right):
     if left > right:
         return False
@@ -47,7 +45,6 @@ def binary_search(array, element, left, right):
     else:
         return binary_search(array, element, middle + 1, right)
 
-
 while True:
     try:
         element = int(input("Введите число от 1 до 999: "))
@@ -58,6 +55,5 @@ while True:
         print("Нужно ввести число!")
     except Exception:
         print("Неправильный диапазон!")
-
 
 print(binary_search(array, element, 0,  len(array)))
